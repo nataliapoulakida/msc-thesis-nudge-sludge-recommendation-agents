@@ -1,0 +1,9 @@
+# Never commit data, workspace state or the thesis PDF
+data/*
+!data/README.md
+*.csv
+*.RData
+.Rhistory
+.Rproj.user/
+*.zip
+Thesis_*.pdf
