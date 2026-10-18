@@ -1,7 +1,6 @@
 # When Relevance Meets Urgency in Recommendation Agents: How Choice Personalization and Delivery Framing Shape User Perceptions on the Nudge-Sludge Continuum
 
 MSc Business Information Management thesis · Rotterdam School of Management, Erasmus University · June 2026
-Official record: [TODO: add link to the university repository record]
 
 ## Abstract
 
