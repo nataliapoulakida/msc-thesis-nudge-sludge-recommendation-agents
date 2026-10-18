@@ -1,6 +1,7 @@
 # When Relevance Meets Urgency in Recommendation Agents: How Choice Personalization and Delivery Framing Shape User Perceptions on the Nudge-Sludge Continuum
 
 MSc Business Information Management thesis · Rotterdam School of Management, Erasmus University · June 2026
+Official record: [TODO: add link to the university repository record]
 
 ## Abstract
 
@@ -21,9 +22,11 @@ Each participant saw one "Top Pick" recommendation. Two factors were varied:
 | **Moderate urgency** (neutral "leaves in 24 hours" note) | Cell 1 (n = 68) | Cell 2 (n = 69) |
 | **Excessive urgency** (countdown timer, red banner, "ACT FAST") | Cell 3 (n = 65) | Cell 4 (n = 76) |
 
+How the recommendations were generated for each condition is described in [`docs/recommendation-logic.md`](docs/recommendation-logic.md).
+
 ### Try the prototype
 
-**[The StreamVibe prototype](https://thesis-experiment.lovable.app/)** is the interface participants used. Pick up to three genres and you'll get a "Top Pick". The condition is randomised on each visit. To see a specific one, add a parameter to the URL:
+**[Open the StreamVibe prototype](https://thesis-experiment.lovable.app/)** is the interface participants used. Pick up to three genres and you'll get a "Top Pick". The condition is randomised on each visit. To see a specific one, add a parameter to the URL:
 
 | URL ending | Condition |
 |---|---|
@@ -85,20 +88,26 @@ These are directional implications from exploratory data, not proven interventio
 ## What's in this repo
 
 ```
-analysis/analysis.R       full analysis script (R 4.5.3), sections match thesis chapter 4
-docs/methodology.md       design, stimuli, measures, sample, analysis plan, limitations
-docs/codebook.md          variables, scales, scoring and exclusion rules
-figures/                  mediation model, perceived-effects plot
-data/README.md            why the data is not included, and how to re-run with your own
+analysis/analysis.R                full analysis (R 4.5.3), sections match thesis chapter 4
+analysis/recommendation_mapping.R  how the prototype's recommendations were generated
+mapping/                           the 129-combination lookup tables (film titles only)
+docs/methodology.md                design, stimuli, measures, sample, analysis plan, limitations
+docs/recommendation-logic.md       scoring, clusters, tiers and overrides behind each recommendation
+docs/codebook.md                   variables, scales, scoring and exclusion rules
+figures/                           mediation model, perceived-effects plot
+data/README.md                     why the data is not included, and how to re-run with your own
 ```
 
 **Not included:** raw data (participant anonymity), the prototype's source code and film artwork (third-party material), and the full thesis PDF.
 
 ## Reproducing the analysis
 
-The raw data is not published, so `analysis.R` will not run as-is. If you run a similar study, export from Qualtrics with the same structure (see `docs/codebook.md`), save it as `data/qualtrics_export.csv`, and run the script from the repository root. Packages: `tidyverse`, `psych`, `car`, `effectsize`, `performance`, `careless`, `mediation`, `patchwork`, `lavaan`, `see`, `lmtest`, `sandwich`.
+The raw data is not published, so `analysis.R` will not run as-is. If you run a similar study, export from Qualtrics with the same structure (see `docs/codebook.md`), save it as `data/qualtrics_export.csv`, and run the script from the repository root. The recommendation lookup tables can be regenerated with `analysis/recommendation_mapping.R` from the public [MovieLens 25M dataset](https://grouplens.org/datasets/movielens/25m/) (not included). Packages for `analysis.R`: `tidyverse`, `psych`, `car`, `effectsize`, `performance`, `careless`, `mediation`, `patchwork`, `lavaan`, `see`, `lmtest`, `sandwich`.
 
+## Contact
+
+Natalia Poulakida · [TODO: LinkedIn] · [TODO: email]
 
 ## Licence
-Code: MIT (see `LICENSE`). 
-Text and figures: © Natalia Poulakida; please cite if you reuse them.
+
+Code: MIT (see `LICENSE`). Text and figures: © Natalia Poulakida; please cite if you reuse them.

@@ -37,7 +37,7 @@ I built a fictional streaming platform ("StreamVibe"), designed in Figma, with r
 - For every film in the nine target genres, an *archetype score* = 0.7 × normalized genre purity + 0.3 × normalized (log) popularity. Purity comes from MovieLens genome relevance scores. Popularity is the number of ratings. The 70/30 weighting favours films that are clearly typical of their genre while staying recognisable.
 - **High personalization:** the three highest-scoring films across the participant's chosen genres, with the best one as Top Pick.
 - **Low personalization:** the other two films stay well matched (so the platform still looks competent), but the Top Pick is swapped for a film from a thematically adjacent genre cluster. This was meant to be a plausible miss, not an absurd one.
-- A few manual overrides were applied for recognisability. These are listed in thesis section 3.3.1.
+- A few manual overrides were applied for recognisability. The full logic, including clusters, adjacency tiers and overrides, is in [`recommendation-logic.md`](recommendation-logic.md).
 
 ## 4. Measures
 

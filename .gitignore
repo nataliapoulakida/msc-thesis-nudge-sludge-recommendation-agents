@@ -7,3 +7,6 @@ data/*
 .Rproj.user/
 *.zip
 Thesis_*.pdf
+
+# Exception: the recommendation lookup tables contain film titles only
+!mapping/*.csv
